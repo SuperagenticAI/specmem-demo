@@ -35,14 +35,18 @@ test that protects the behavior, before writing a single line.
 - [uv](https://docs.astral.sh/uv/) (the only thing you install yourself).
 - That is it. `uv` creates the environment and pulls in SpecMem for you.
 
-> This project currently runs SpecMem from a local checkout next to this repo
-> (see `pyproject.toml`). Clone both repositories side by side:
->
-> ```
-> parent/
-> ├── specmem/          # https://github.com/SuperagenticAI/specmem
-> └── specmem-example/  # this repo
-> ```
+## Setup
+
+```bash
+git clone https://github.com/SuperagenticAI/specmem-demo
+cd specmem-demo
+```
+
+Sync the environment (creates a `.venv` and installs all dependencies):
+
+```bash
+uv sync
+```
 
 ## Quick start
 
