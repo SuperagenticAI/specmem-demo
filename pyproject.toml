@@ -1,0 +1,17 @@
+[project]
+name = "specmem-example"
+version = "0.0.0"
+description = "Example project using SpecMem with Qdrant and local embeddings"
+requires-python = ">=3.11"
+# Local embeddings (sentence-transformers) + Qdrant vector store.
+dependencies = [
+    "specmem[local,qdrant]>=0.2.1",
+]
+
+[tool.uv]
+# This project is just an environment, not an installable package.
+package = false
+
+[tool.pytest.ini_options]
+# Put the repo root on the path so tests can import `src.auth...`.
+pythonpath = ["."]

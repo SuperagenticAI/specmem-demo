@@ -1,0 +1,18 @@
+adapters = [
+    "kiro",
+]
+
+[embedding]
+provider = "local"
+model = "all-MiniLM-L6-v2"
+
+[vectordb]
+# Qdrant runs embedded (on-disk, no server) when qdrant_url is unset.
+# For a Qdrant server or Qdrant Cloud, set qdrant_url (and qdrant_api_key).
+backend = "qdrant"
+path = ".specmem/vectordb"
+# qdrant_url = "http://localhost:6333"
+# qdrant_api_key = ""   # or set QDRANT_API_KEY
+
+[validation]
+enabled = true
